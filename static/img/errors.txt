@@ -1,0 +1,1 @@
+[Tue Jul 08 2014 09:31:15 GMT-0600 (MDT)] Layer "test.svg": Unsupported extension: svg

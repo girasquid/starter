@@ -1,0 +1,16 @@
+.btn-orange {
+  .button-variant(@white; @goOrange; darken(@goOrange, 10%));
+  font-weight: bold;
+}
+
+.btn-blue {
+  .button-variant(@white; @goBlue; darken(@goBlue, 10%));
+  font-weight: bold;
+}
+
+br.respond {
+    display: block;
+    @media (max-width: @screen-sm-max) {
+        display: none;
+    }
+}
