@@ -1,0 +1,10 @@
+.btn-remove-vehicle:after {
+  content: 'Remove Vehicle';
+}
+.btn-add-vehicle:after {
+  content: 'Add Vehicle';
+}
+.fullframe {
+  width: 100%;
+  height: 100%;
+}

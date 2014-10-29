@@ -85,16 +85,4 @@ It is VERY important not to include the `/node_modules/` folder in git!
 
     *.DS_Store
     /node_modules/
-    /static/vendor/*/bower.json
-    /static/vendor/*/.bower.json
-    /static/vendor/*/readme.md
-    /static/vendor/*/README.md
-    /static/vendor/*/LICENSE
-    /static/vendor/*/test-infra
-    /static/vendor/*/demo
-    /static/vendor/*/test
-    /static/vendor/*/examples
-    /static/vendor/modernizr/feature-detects
-    /static/vendor/modernizr/media
-    /static/vendor/jquery-backstretch/libs
-    /static/vendor/jquery/src/
+    /static/vendor/
