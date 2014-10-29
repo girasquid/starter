@@ -1,6 +1,6 @@
 #!/bin/sh
-# curl get.tcms.me | sh
-lsecho "*** Installing..."
+# curl -sL http://bit.ly/_goauto | sh
+echo "*** Installing..."
 
 echo " __
 /__ _  /\   _|_ _
