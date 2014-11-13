@@ -1,4 +1,3 @@
-@import "../vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6272,10 +6271,10 @@ br.respond {
   display: block;
   text-align: center;
   width: 130px;
-  margin: 30px auto 0;
+  margin: 60px auto 0;
 }
 #sidebar section {
-  margin: 0 30px;
+  margin: 0 60px;
 }
 #content-wrapper {
   clear: right;
@@ -6289,5 +6288,5 @@ br.respond {
   background-color: #d5d5d5;
 }
 #content section {
-  margin: 0 15px;
+  margin: 0 30px;
 }
