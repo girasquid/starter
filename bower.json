@@ -2,16 +2,6 @@
   "name": "goAuto",
   "version": "0.1.0",
   "dependencies": {
-    "bootstrap": "latest",
-    "font-awesome": "4.2.0",
-    "jquery": "latest",
-    "modernizr": "latest",
-    "html5shiv": "~3.7.0",
-    "imagesloaded": "latest",
-    "detectizr": "latest",
-    "animate.css": "latest",
-    "pickadate": "3.5.4",
-    "imagesloaded": "latest",
-    "metisMenu": "~1.1.1"
+    "ga-assets": "git@github.com:goauto/ga-assets.git"
   }
 }
