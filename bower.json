@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "dependencies": {
     "ga-assets": "git@github.com:goauto/ga-assets.git",
-        "animate.css": "latest",
-    "lesshat": "~3.0.2",
-    "animate.less": "*",
-    "nprogress": "~0.1.6",
     "jquery.lazyload": "https://github.com/tuupola/jquery_lazyload/"
   }
 }
