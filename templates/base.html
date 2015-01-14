@@ -1,0 +1,37 @@
+{% load stores_tags sekizai_tags %}{% get_primary_store as primary_store %}<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>{% block title_prefix %}Go Auto{% endblock title_prefix %} {% block title %} | New Used Trucks SUVs Cars {% block inventory_title %}{% endblock inventory_title %}{% endblock title %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
+    <link rel="icon" type="image/png" href="{{ STATIC_URL}}img/favicon.png">
+
+    {% addtoblock "css" %}<link rel="stylesheet" href="{{ STATIC_URL}}css/vendor.min.css" />{% endaddtoblock "css" %}
+    {% addtoblock "css" %}<link rel="stylesheet" href="{{ STATIC_URL}}css/app.min.css" />{% endaddtoblock "css" %}
+    {% addtoblock "css" %}<style> [data-sr] { visibility: hidden; } </style>{% endaddtoblock "css" %}
+    {% render_block "css" %}
+
+    {% block base_header_meta %}
+    <meta property='article:publisher' content='{{ primary_store.facebook }}' />
+    <meta property='article:author' content='{{ primary_store.facebook }}' />
+
+    <link rel='author' href='{{ primary_store.googleplus }}' />
+    <meta name='google-site-verification' content='{{ primary_store.googleverification }}' />
+
+    <meta name='twitter:card' content='summary'/>
+    <meta name='twitter:site' content='{{ primary_store.twittername }}'/>
+    <meta name='twitter:domain' content='Continue reading...'/>
+    <meta name='twitter:creator' content='{{ primary_store.twittername }}'/>
+
+    {% endblock base_header_meta %}
+
+
+</head>
+<body id="newSite" class="{% block body_css %}{% endblock body_css %}">
+
+{% block base_content %}{% endblock base_content %}
+
+</body>
+</html>

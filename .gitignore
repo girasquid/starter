@@ -1,4 +1,6 @@
 *.DS_Store
+*.pyc
+*.map
 /node_modules/
 /static/vendor/*/bower.json
 /static/vendor/*/.bower.json
@@ -20,4 +22,15 @@
 /static/vendor/iscroll/demos
 /static/vendor/iscroll/src
 /static/vendor/iscroll/build.js
+static/img/heroA.mp4
+static/img/heroB.mp4
+static/img/heroC.mp4
+static/js/app.min.js.map
+static/css/app.min.css.map
+static/js/vendor.min.js.map
+urls.pyc
+settings.pyc
 config.codekit
+static/js/min
+todo.md
+todo.html
