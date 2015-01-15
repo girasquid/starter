@@ -30,18 +30,13 @@ The key folder structure should be something like this.
 ### bower.json
     
     {
-      "name": "goAutoPorsche",
+      "name": "goAuto",
       "version": "0.1.0",
       "dependencies": {
-        "bootstrap": "latest",
-        "jquery": "latest",
-        "retina.js": "~1.2.0",
-        "flexslider": "*",
-        "jquery-backstretch": "~2.0.4",
-        "html5shiv": "~3.7.0",
+        "ga-assets": "git@github.com:goauto/ga-assets.git",
+        "jquery.lazyload": "https://github.com/tuupola/jquery_lazyload/"
       }
     }
-
 
 Run `bower install` to install the required packages.
 

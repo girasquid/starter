@@ -1,0 +1,5 @@
+[
+  "vendor/bootstrap/dist/js/bootstrap.js",
+  "vendor/modernizr/modernizr.js",
+  "vendor/detectizr/dist/detectizr.js"
+]

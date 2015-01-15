@@ -1,0 +1,7 @@
+{
+  "name": "goAuto",
+  "version": "0.1.0",
+  "dependencies": {
+    "ga-assets": "git@github.com:goauto/ga-assets.git"
+  }
+}

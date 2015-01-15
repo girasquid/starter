@@ -1,0 +1,11 @@
+[
+  "vendor/ga-assets/js/ga-observer.js",
+  "vendor/ga-assets/js/ga-constants.js",
+  "vendor/ga-assets/js/ga-helpers.js",
+  "vendor/ga-assets/js/ga-calculator.js",
+  "vendor/ga-assets/js/ga-googlemaps.js",
+  "vendor/ga-assets/js/ga-validation.js",
+  "vendor/ga-assets/js/ga-whybuy.js",
+  "vendor/ga-assets/js/ga-quicksearch.js",
+  "vendor/ga-assets/js/ga-blackbook.js"
+]
