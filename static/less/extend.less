@@ -1,3 +1,5 @@
+@import "../vendor/ga-assets/less/_breakpoints";
+
 //
 // Override variables and custom variables
 // --------------------------------------------------
@@ -5,14 +7,21 @@
 @paddingSmall:                  60px;
 @paddingTiny:                   20px;
 
+
 // Include any variables from the variable.less file here to over rdies it.
 @text-color:                    @gray;
 @input-color-placeholder:       lighten(@text-color, 25%);
 @headingsFontWeight:            400;
 
-// Branding Colours
-@white:                         #ffffff;
 
-@goOrange:                      #f2682a;
-@goBlue:                        #003c4b;
-@goBlueLight:                   #b7d3db;
+// These should match the branding colors of the project site.
+@import "../vendor/ga-assets/less/_colors";
+@brandPrimary:                  @goOrange;
+@brandPrimaryLight:             @goOrangeLight;
+@brandPrimaryDark:              @goOrangeDark;
+@brandSecondary:                @goBlue;
+@brandSecondaryLight:           @goBlueLight;
+@brandSecondaryDark:            @goBlueDark;
+
+@serviceIcon:                   @brandPrimary;
+@serviceIconActive:             @brandSecondary;
