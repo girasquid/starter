@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72df84b-9471-4f70-958a-8b9c7b0f7611" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/src/_observer.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/my-gocard.less" afterPath="$PROJECT_DIR$/static/less/_my-gocard.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/app.css" afterPath="$PROJECT_DIR$/static/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/app.less" afterPath="$PROJECT_DIR$/static/less/app.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/extend.less" afterPath="$PROJECT_DIR$/static/less/extend.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/mixins.less" afterPath="$PROJECT_DIR$/static/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/responsive.less" afterPath="$PROJECT_DIR$/static/less/responsive.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/starter.iml" afterPath="$PROJECT_DIR$/.idea/starter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/style.less" afterPath="$PROJECT_DIR$/static/less/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/vendor.css" afterPath="$PROJECT_DIR$/static/css/vendor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/less/vendor.less" afterPath="$PROJECT_DIR$/static/less/vendor.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/_debug.less" afterPath="$PROJECT_DIR$/static/less/src/_debug.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/_my-gocard.less" afterPath="$PROJECT_DIR$/static/less/src/_my-gocard.less" />
     </list>
     <ignored path="starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,8 +114,8 @@
       <file leaf-file-name="extend.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/less/extend.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4813278" vertical-offset="0" max-vertical-offset="1205">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.62572616" vertical-offset="0" max-vertical-offset="1205">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -267,72 +256,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ga-assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ga-assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -358,6 +281,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/less/src" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
@@ -919,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/less/extend.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4813278" vertical-offset="0" max-vertical-offset="1205">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.62572616" vertical-offset="0" max-vertical-offset="1205">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
