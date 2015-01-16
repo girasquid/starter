@@ -4,4 +4,4 @@
 static/vendor/
 static/node_modules
 npm-debug.log
-.idea/workspace.xml
+.idea/
