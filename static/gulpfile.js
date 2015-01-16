@@ -127,6 +127,7 @@ gulp.task("styles:vendor", function(){
 
 
 // Rerun the task when a file changes
+// https://www.npmjs.com/package/gulp-watch
 gulp.task('watch', function() {
   livereload.listen();
 
