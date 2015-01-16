@@ -38,7 +38,7 @@ var config = {
             watch: "vendor/",
             name: "vendor.js"
         },
-        vensite: {
+        vendor_site: {
             source: require('./source/vendor_site.json'),
             watch: "vendor/",
             name: "vendor.site.js"
@@ -52,7 +52,7 @@ var config = {
     },
 
     // production mode (see build task)
-    //https://www.npmjs.com/package/yargs
+    // https://www.npmjs.com/package/yargs
     isProduction: false,
     useSourceMaps: false,
     lvr_port: 35729
@@ -79,9 +79,9 @@ gulp.task('scripts:vendor:core', function() {
 });
 
 gulp.task('scripts:vendor:site', function() {
-    return gulp.src(config.script.site.source)
-        .pipe(expect(config.script.site.source))
-        .pipe(concat(config.script.site.name))
+    return gulp.src(config.script.vendor_site.source)
+        .pipe(expect(config.script.vendor_site.source))
+        .pipe(concat(config.script.vendor_site.name))
         .pipe(gulp.dest(config.script.dest))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
@@ -130,13 +130,8 @@ gulp.task("styles:vendor", function(){
 gulp.task('watch', function() {
   livereload.listen();
 
-  gulp.watch(config.scripts.watch,           ['scripts:app']);
-  gulp.watch(config.styles.app.watch,        ['styles:app', 'styles:app:rtl']);
-  gulp.watch(config.styles.themes.watch,     ['styles:themes']);
-  gulp.watch(config.bootstrap.watch,         ['styles:app']); //bootstrap
-  gulp.watch(config.templates.pages.watch,   ['templates:pages']);
-  gulp.watch(config.templates.views.watch,   ['templates:views']);
-  gulp.watch(config.templates.app.watch,     ['templates:app']);
+  gulp.watch(config.script.app.watch,           ['scripts:app']);
+  gulp.watch(config.less.app.watch,             ['styles:app']);
 
   gulp.watch([
 
@@ -153,10 +148,14 @@ gulp.task('watch', function() {
 
 // default (no minify)
 gulp.task('default', gulpsync.sync([
-          'styles:app',
-          //'styles:vendor',
-          //'scripts:vendor:core',
-          //'start'
+            'styles:app',
+            'styles:vendor',
+            'scripts:app',
+            'scripts:vendor',
+            'scripts:vendor:core',
+            'scripts:vendor:site',
+
+            //'start'
         ]), function(){
           gutil.log(gutil.colors.green('************************************'));
           gutil.log(gutil.colors.green('*'));
@@ -169,7 +168,7 @@ gulp.task('start',[
           'styles:app',
           'styles:vendor',
           'scripts:vendor:core',
-          //'watch'
+          'watch'
         ]);
 
 

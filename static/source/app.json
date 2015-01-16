@@ -1,7 +1,7 @@
 [
-  "src/_constants.js",
-  "src/_helpers.js",
-  "src/_site.js",
-  "src/_validation.js",
-  "src/_init.js"
+  "js/src/_constants.js",
+  "js/src/_helpers.js",
+  "js/src/_site.js",
+  "js/src/_validation.js",
+  "js/src/_init.js"
 ]

@@ -1,17 +1,4 @@
 [
   "vendor/jquery/dist/jquery.js",
-  "vendor/ga-assets/js/jquery-ui.custom/jquery-ui.min.js",
-  "vendor/bootstrap/dist/js/bootstrap.js",
-  "vendor/modernizr/modernizr.js",
-  "vendor/detectizr/dist/detectizr.js",
-  "vendor/scrollReveal.min.js",
-  "vendor/jquery-nstslider/dist/jquery.nstSlider.min.js",
-  "vendor/ga-assets/js/hero.videoBG.js",
-  "vendor/happyjs/happy.js",
-  "vendor/happyjs/happy.methods.js",
-  "vendor/owl.carousel/dist/owl.carousel.js",
-  "vendor/jquery-pjax/jquery.pjax.js",
-  "vendor/uri.js/src/URI.min.js",
-  "vendor/uri.js/src/jquery.URI.min.js",
-  "vendor/nprogress/nprogress.js"
+  "vendor/ga-assets/js/jquery-ui.custom/jquery-ui.min.js"
 ]
