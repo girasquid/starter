@@ -103,7 +103,7 @@ gulp.task("styles:app", function(){
     return gulp.src(config.less.app.main)
         .pipe( config.useSourceMaps ? sourcemaps.init() : gutil.noop())
         .pipe(plugins.less({
-            paths: [config.less.app.dir]
+            paths: [config.less.dir]
         }))
         .on("error", handleError)
         .pipe(rename({suffix: '.min'}))
@@ -154,8 +154,8 @@ gulp.task('watch', function() {
 // default (no minify)
 gulp.task('default', gulpsync.sync([
           'styles:app',
-          'styles:vendor',
-          'scripts:vendor:core',
+          //'styles:vendor',
+          //'scripts:vendor:core',
           //'start'
         ]), function(){
           gutil.log(gutil.colors.green('************************************'));
