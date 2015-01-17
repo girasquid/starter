@@ -20,11 +20,13 @@ The key folder structure should be something like this.
 * /src
 * /src/_design/ {photoshop files}
 * /src/_recources/ {fonts and other assets}
+* /static/js/src/ { Script source files}
 * /static/js/app.js
 * /static/img/
 * /static/less/app.less
 * /static/less/extend.less
 * /static/less/bootstrap.less
+* /static/source/ { Script source files}
 
 
 ### bower.json
@@ -33,8 +35,7 @@ The key folder structure should be something like this.
       "name": "goAuto",
       "version": "0.1.0",
       "dependencies": {
-        "ga-assets": "git@github.com:goauto/ga-assets.git",
-        "jquery.lazyload": "https://github.com/tuupola/jquery_lazyload/"
+        "ga-assets": "git@github.com:goauto/ga-assets.git"
       }
     }
 
