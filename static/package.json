@@ -1,7 +1,8 @@
 {
   "name": "go-auto",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "0.0.6",
@@ -24,7 +25,8 @@
     "gulp-sync": "^0.1.4",
     "gulp-util": "^3.0.1",
     "tiny-lr": "0.0.5",
-    "gulp-cssmin": "~0.1.6"
+    "gulp-cssmin": "~0.1.6",
+    "gulp-watch": "~3.0.0"
   },
   "scripts": {
     "prestart": "bower install",

@@ -10,6 +10,7 @@ var gulp            = require("gulp"),
     notify          = require('gulp-notify'),
     gulpsync        = require('gulp-sync')(gulp),
     livereload      = require('gulp-livereload'), // Livereload plugin needed: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+    watch           = require('gulp-watch');
     lr              = require('tiny-lr');
 
 var config = {
@@ -30,22 +31,22 @@ var config = {
     script: {
         core: {
             source: require('./source/core.json'),
-            watch: "vendor/",
+            watch: "vendor/**/*.js",
             name: "core.js"
         },
         vendor: {
             source: require('./source/vendor.json'),
-            watch: "vendor/",
+            watch: "vendor/**/*.js",
             name: "vendor.js"
         },
         vendor_site: {
             source: require('./source/vendor_site.json'),
-            watch: "vendor/",
+            watch: "vendor/ga-assets/js/*.js",
             name: "vendor.site.js"
         },
         app: {
             source: require('./source/app.json'),
-            watch: "js/src/",
+            watch: "js/src/*.js",
             name: "app.js"
         },
         dest: "js"
@@ -131,10 +132,10 @@ gulp.task("styles:vendor", function(){
 gulp.task('watch', function() {
     //livereload.listen();
 
-    gulp.watch(config.script.core.watch,          ['scripts:vendor']);
-    gulp.watch(config.script.vendor.watch,        ['scripts:vendor:core']);
-    gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
     gulp.watch(config.script.app.watch,           ['scripts:app']);
+    gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
+    gulp.watch(config.script.core.watch,          ['scripts:vendor:core']);
+    gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
 
     gulp.watch(config.less.app.watch,             ['styles:app']);
     gulp.watch(config.less.vendor.watch,          ['styles:vendor']);
@@ -145,12 +146,22 @@ gulp.task('watch', function() {
       '../app/**'
 
     ]).on('change', function(event) {
-        livereload.changed( event.path );
-        gutil.log(gutil.colors.green(event));
+        //livereload.changed( event.path );
+        gutil.log(gutil.colors.cyan(event.path));
+
     });
 
 });
 
+/*
+// build for production (minify)
+gulp.task('build', ['prod', 'default']);
+gulp.task('prod', function() { isProduction = true; });
+
+// build with sourcemaps (no minify)
+gulp.task('sourcemaps', ['usesources', 'default']);
+gulp.task('usesources', function(){ useSourceMaps = true; });
+*/
 
 // default (no minify)
 gulp.task('default', gulpsync.sync([
@@ -162,19 +173,23 @@ gulp.task('default', gulpsync.sync([
             'scripts:vendor:site',
             'watch'
         ]), function(){
-          gutil.log(gutil.colors.green('************************************'));
-          gutil.log(gutil.colors.green('*'));
-          gutil.log(gutil.colors.green('* All Done You can start editing your code, '));
-          gutil.log(gutil.colors.green('*'));
-          gutil.log(gutil.colors.green('************************************'));
+
+          gutil.log(gutil.colors.cyan('************'));
+          gutil.log(gutil.colors.cyan('* All Done *'), 'You can start editing your code, LiveReload will update your browser after any change..');
+          gutil.log(gutil.colors.cyan('************'));
+
         });
 
 gulp.task('start',[
+            'styles:app',
+            'styles:vendor',
+            'scripts:app',
+            'scripts:vendor',
+            'scripts:vendor:core',
+            'scripts:vendor:site',
             'watch'
         ]);
 
-
-// Error handler
 function handleError(err) {
   console.log(err.toString());
   this.emit('end');
