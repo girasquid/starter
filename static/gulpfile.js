@@ -129,20 +129,25 @@ gulp.task("styles:vendor", function(){
 // Rerun the task when a file changes
 // https://www.npmjs.com/package/gulp-watch
 gulp.task('watch', function() {
-  livereload.listen();
+    //livereload.listen();
 
-  gulp.watch(config.script.app.watch,           ['scripts:app']);
-  gulp.watch(config.less.app.watch,             ['styles:app']);
+    gulp.watch(config.script.core.watch,          ['scripts:vendor']);
+    gulp.watch(config.script.vendor.watch,        ['scripts:vendor:core']);
+    gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
+    gulp.watch(config.script.app.watch,           ['scripts:app']);
 
-  gulp.watch([
+    gulp.watch(config.less.app.watch,             ['styles:app']);
+    gulp.watch(config.less.vendor.watch,          ['styles:vendor']);
+
+
+    gulp.watch([
 
       '../app/**'
 
-  ]).on('change', function(event) {
-
-      livereload.changed( event.path );
-
-  });
+    ]).on('change', function(event) {
+        livereload.changed( event.path );
+        gutil.log(gutil.colors.green(event));
+    });
 
 });
 
@@ -155,8 +160,7 @@ gulp.task('default', gulpsync.sync([
             'scripts:vendor',
             'scripts:vendor:core',
             'scripts:vendor:site',
-
-            //'start'
+            'watch'
         ]), function(){
           gutil.log(gutil.colors.green('************************************'));
           gutil.log(gutil.colors.green('*'));
@@ -166,10 +170,7 @@ gulp.task('default', gulpsync.sync([
         });
 
 gulp.task('start',[
-          'styles:app',
-          'styles:vendor',
-          'scripts:vendor:core',
-          'watch'
+            'watch'
         ]);
 
 
