@@ -18,11 +18,11 @@ var config = {
     less: {
         app: {
             main: ["less/app.less"],
-            watch: 'less'
+            watch: ['less/*.less', 'less/**/*.less', '!less/vendor.less']
         },
         vendor: {
             main: ["less/vendor.less"],
-            watch: 'less'
+            watch: ['less/*.less', 'less/**/*.less', '!less/app.less']
         },
         dir: 'less',
         dest: "css"
@@ -31,12 +31,12 @@ var config = {
     script: {
         core: {
             source: require('./source/core.json'),
-            watch: "vendor/**/*.js",
+            watch: ["vendor/**/*.js"],
             name: "core.js"
         },
         vendor: {
             source: require('./source/vendor.json'),
-            watch: "vendor/**/*.js",
+            watch: ["vendor/**/*.js"],
             name: "vendor.js"
         },
         vendor_site: {
@@ -132,10 +132,10 @@ gulp.task("styles:vendor", function(){
 gulp.task('watch', function() {
     //livereload.listen();
 
-    gulp.watch(config.script.app.watch,           ['scripts:app']);
-    gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
-    gulp.watch(config.script.core.watch,          ['scripts:vendor:core']);
-    gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
+    //gulp.watch(config.script.app.watch,           ['scripts:app']);
+    //gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
+    //gulp.watch(config.script.core.watch,          ['scripts:vendor:core']);
+    //gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
 
     gulp.watch(config.less.app.watch,             ['styles:app']);
     gulp.watch(config.less.vendor.watch,          ['styles:vendor']);
@@ -143,7 +143,7 @@ gulp.task('watch', function() {
 
     gulp.watch([
 
-      '../app/**'
+      '/'
 
     ]).on('change', function(event) {
         //livereload.changed( event.path );
