@@ -11,7 +11,6 @@ var gulp            = require("gulp"),
     gulpsync        = require('gulp-sync')(gulp),
     livereload      = require('gulp-livereload'), // Livereload plugin needed: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
     watch           = require('gulp-watch');
-    lr              = require('tiny-lr');
 
 var config = {
 
@@ -130,7 +129,7 @@ gulp.task("styles:vendor", function(){
 // Rerun the task when a file changes
 // https://www.npmjs.com/package/gulp-watch
 gulp.task('watch', function() {
-    //livereload.listen();
+    livereload.listen();
 
     //gulp.watch(config.script.app.watch,           ['scripts:app']);
     //gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
@@ -146,7 +145,7 @@ gulp.task('watch', function() {
       '/'
 
     ]).on('change', function(event) {
-        //livereload.changed( event.path );
+        livereload.changed( event.path );
         gutil.log(gutil.colors.cyan(event.path));
 
     });
