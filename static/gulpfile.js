@@ -11,18 +11,17 @@ var gulp            = require("gulp"),
     gulpsync        = require('gulp-sync')(gulp),
     livereload      = require('gulp-livereload'), // Livereload plugin needed: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
     watch           = require('gulp-watch');
-    lr              = require('tiny-lr');
 
 var config = {
 
     less: {
         app: {
             main: ["less/app.less"],
-            watch: 'less'
+            watch: ['less/*.less', 'less/**/*.less', '!less/vendor.less']
         },
         vendor: {
             main: ["less/vendor.less"],
-            watch: 'less'
+            watch: ['less/*.less', 'less/**/*.less', '!less/app.less']
         },
         dir: 'less',
         dest: "css"
@@ -31,12 +30,12 @@ var config = {
     script: {
         core: {
             source: require('./source/core.json'),
-            watch: "vendor/**/*.js",
+            watch: ["vendor/**/*.js"],
             name: "core.js"
         },
         vendor: {
             source: require('./source/vendor.json'),
-            watch: "vendor/**/*.js",
+            watch: ["vendor/**/*.js"],
             name: "vendor.js"
         },
         vendor_site: {
@@ -130,12 +129,12 @@ gulp.task("styles:vendor", function(){
 // Rerun the task when a file changes
 // https://www.npmjs.com/package/gulp-watch
 gulp.task('watch', function() {
-    //livereload.listen();
+    livereload.listen();
 
-    gulp.watch(config.script.app.watch,           ['scripts:app']);
-    gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
-    gulp.watch(config.script.core.watch,          ['scripts:vendor:core']);
-    gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
+    //gulp.watch(config.script.app.watch,           ['scripts:app']);
+    //gulp.watch(config.script.vendor.watch,        ['scripts:vendor']);
+    //gulp.watch(config.script.core.watch,          ['scripts:vendor:core']);
+    //gulp.watch(config.script.vendor_site.watch,   ['scripts:vendor:site']);
 
     gulp.watch(config.less.app.watch,             ['styles:app']);
     gulp.watch(config.less.vendor.watch,          ['styles:vendor']);
@@ -143,10 +142,10 @@ gulp.task('watch', function() {
 
     gulp.watch([
 
-      '../app/**'
+      '/'
 
     ]).on('change', function(event) {
-        //livereload.changed( event.path );
+        livereload.changed( event.path );
         gutil.log(gutil.colors.cyan(event.path));
 
     });
