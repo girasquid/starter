@@ -1,4 +1,4 @@
-var newSite = {
+var GoautoSite = {
     init: function (event) {
         this.bindEvents();
     },

@@ -68,6 +68,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/static\/gulpfile.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/gulpfile.js",
+		"outputAbbreviatedPath": "\/static\/min\/gulpfile-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/js\/app.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -101,12 +112,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/js\/core.min.js": {
+	"\/static\/js\/min\/vendor-min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/js\/core.min.js",
-		"outputAbbreviatedPath": "\/static\/js\/min\/core.min-min.js",
+		"inputAbbreviatedPath": "\/static\/js\/min\/vendor-min.js",
+		"outputAbbreviatedPath": "\/static\/js\/min\/min\/vendor-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -172,18 +183,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/js\/vendor.js",
-		"outputAbbreviatedPath": "\/static\/js\/vendor.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
-		"syntaxCheckerStyle": 0
-		},
-	"\/static\/js\/vendor.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/js\/vendor.min.js",
-		"outputAbbreviatedPath": "\/static\/js\/min\/vendor.min-min.js",
+		"outputAbbreviatedPath": "\/static\/js\/min\/vendor-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -9887,32 +9887,6 @@
 	],
 "lastSavedByUser": "Adam Patterson",
 "manualImportLinks": {
-	"\/static\/js\/vendor.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/static\/vendor\/jquery-cookie\/jquery.cookie.js",
-			"position": 0,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/static\/vendor\/html5shiv\/dist\/html5shiv.js",
-			"position": 3,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/static\/vendor\/imagesloaded\/imagesloaded.js",
-			"position": 7,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/static\/vendor\/wookmark-jquery\/jquery.wookmark.js",
-			"position": 9,
-			"type": 0
-			}
-		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
